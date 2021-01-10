@@ -4,12 +4,12 @@
 /* VARIABLE CSS */
 :root{
     /* COLORES */
-    --first-color: #9D4BFF;
-    --first-color-dark: #23004D;
-    --first-color-light: #A49EAC;
-    --first-color-lighten: #F2F2F2;
+    --first-color: #afbb6b;
+    --first-color-dark: #303800;
+    --first-color-light:  #A49EAC;
+    --first-color-lighten: #eaeed2;
 
-    /* FONT AND TYPOGRAPHY */
+    /* FONTS AND TYPOGRAPYH */
     --body-font: 'Open Sans', sans-serif;
     --h1-font-size: 1.5rem;
     --normal-font-size: .938rem;
@@ -24,7 +24,7 @@
 }
 
 /* BASE */
-*,::before,::after{
+*,::before::after{
     box-sizing: border-box;
 }
 
@@ -38,21 +38,21 @@ body{
 
 h1{
     margin: 0;
-
 }
 
 a{
     text-decoration: none;
+
 }
 
 img{
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
 }
 
 /* LOGIN */
-.login{
+.signin{
     display: grid;
     grid-template-columns: 100%;
     height: 100vh;
@@ -60,25 +60,25 @@ img{
     margin-right: 1.5rem;
 }
 
-.login__content{
+.signin__content{
     display: grid;
 }
 
-.login__img{
+.signin__img{
     justify-content: center;
 }
 
-.login__img img{
+.signin__img img{
     width: 310px;
     margin-top: 1.5rem;
 }
 
-.login__forms{
+.signin__forms{
     position: relative;
     height: 368px;
 }
 
-.login__registre, .login__create{
+.signin__registre, .signin__create{
     position: absolute;
     bottom: 1rem;
     width: 100%;
@@ -91,40 +91,39 @@ img{
     animation-name: animate-login;
 }
 
+
 @keyframes animate-login{
-    0%{
-        transform: scale(1,1);
-    }
-    50%{
-        transform: scale(1.1,1.1);
-    }
-    100%{
-        transform: scale(1,1);
-    }
+0%{
+    transform: scale(1,1);
 }
-
-
-.login__title{
+50%{
+    transform: scale(1.1,1.1);
+}
+100%{
+    transform: scale(1,1);
+}
+}
+.signin__title{
     font-size: var(--h1-font-size);
     margin-bottom: 2rem;
 }
 
-.login__box{
+.signin__box{
     display: grid;
     grid-template-columns: max-content 1fr;
     column-gap: .5rem;
-    padding: 1.125rem 1rem;
+    padding: 1.125rem 1ren;
     background-color: #FFF;
     margin-top: 1rem;
     border-radius: .5rem;
 }
 
-.login__icon{
+.signin__icon{
     font-size: 1.5rem;
     color: var(--first-color);
 }
 
-.login__input{
+.signin__input{
     border: none;
     outline: none;
     font-size: var(--normal-font-size);
@@ -132,13 +131,13 @@ img{
     color: var(--first-color-dark);
 }
 
-.login__input::placeholder{
+.signin__input::placeholder{
     font-size: var(--normal-font-size);
     font-family: var(--body-font);
     color: var(--first-color-light);
 }
 
-.login__forgot{
+.signin__forgot{
     display: block;
     width: max-content;
     margin-left: auto;
@@ -148,7 +147,7 @@ img{
     color: var(--first-color-light);
 }
 
-.login__button{
+.signin__button{
     display: block;
     padding: 1rem;
     margin: 2rem 0;
@@ -160,32 +159,22 @@ img{
     transition: .3s;
 }
 
-.login__button:hover{
+.signin__button:hover{
     background-color: var(--first-color-dark);
 }
 
-.login__account, .login__signin, .login__signup{
+.signin__account, .signin__signin, .signin__signup{
     font-weight: 600;
     font-size: var(--small-font-size);
 }
 
-.login__account{
+.signin__account{
     color: var(--first-color-dark);
 }
 
-.login__signin, .login__signup{
+.signin__signin, .signin__signup{
     color: var(--first-color);
     cursor: pointer;
-}
-
-.login__social{
-    margin-top: 2rem;
-}
-
-.login__social-icon{
-    font-size: 1.5rem;
-    color: var(--first-color-dark);
-    margin: 0 1.5rem;
 }
 
 /* SHOW LOGIN */
@@ -198,50 +187,51 @@ img{
     display: none;
 }
 
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 576px){
-    .login__forms{
+    .signin__forms{
         width: 348px;
         justify-self: center;
     }
 }
 @media screen and (min-width: 1024px){
-    .login{
+    .signin{
         height: 100vh;
         overflow: hidden;
     }
 
-    .login__content{
+    .signin__content{
         grid-template-columns: repeat(2, max-content);
         justify-content: center;
         align-items: center;
         margin-left: 10rem;
     }
 
-    .login__img{
+    .signin__img{
         display: flex;
         width: 600px;
         height: 588px;
-        background-color: var(--first-color-lighten);
+        background-color: #FFF;
         border-radius: 1rem;
         padding-left: 1rem;
     }
 
-    .login__img img{
+    .signin__img img{
         width: 390px;
         margin-top: 0;
 
     }
 
-    .login__registre, .login__create{
+    .signin__registre, .signin__create{
         left: -11rem;
     }
 
-    .login__registre{
+    .signin__registre{
         bottom: -2rem;
     }
 
-    .login__create{
+    .signin__create{
         bottom: -5.5rem;
     }
 }

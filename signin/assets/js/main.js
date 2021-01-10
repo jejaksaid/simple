@@ -15,7 +15,7 @@ signUp.addEventListener('click', ()=>{
 })
 
 signIn.addEventListener('click', ()=>{
-    // REMOVE CLASSES FIRST IF THEY EXIST
+    // REMOVE CLASSES IF THEY EXIST
     loginIn.classList.remove('none')
     loginUp.classList.remove('block')
 
