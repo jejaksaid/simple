@@ -176,3 +176,31 @@ p {
 .sci li img:hover {
 	opacity: 1;
 }
+
+.title {
+	width: 100%;
+	text-align: center;
+}
+
+.title h2 {
+	position: relative;
+	color: #00bcd4;
+	font-size: 1.8em;
+	font-weight: 700;
+}
+
+.title p {
+	max-width: 700px;
+	display: inline-block;
+}
+
+.title h2::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -10px;
+	width: 60px;
+	height: 4px;
+	background: #000;
+}
